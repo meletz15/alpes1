@@ -1,13 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const slides = document.querySelectorAll('.slide');
 
-  // Si no hay slides o solo hay uno, no hacer nada
+  // 🚫 NO ejecutar slider en móvil
+  if (window.innerWidth < 768) {
+    console.log('Slider desactivado en móvil');
+    return;
+  }
+
+  const slides = document.querySelectorAll('.slide');
   if (!slides || slides.length < 2) return;
 
   let index = 0;
 
-  const sliderInterval = setInterval(() => {
-    // 🔒 Blindaje total
+  setInterval(() => {
     if (!slides[index]) return;
 
     slides[index].classList.remove('active');
@@ -21,11 +25,4 @@ document.addEventListener('DOMContentLoaded', () => {
     slides[index].classList.add('active');
   }, 3000);
 
-  // 🔑 CUANDO SE ABRE EL MENÚ, PAUSAR EL SLIDER
-  const menu = document.getElementById('menuMovil');
-  if (menu) {
-    menu.addEventListener('show.bs.offcanvas', () => {
-      clearInterval(sliderInterval);
-    });
-  }
 });
