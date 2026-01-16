@@ -26,3 +26,50 @@ document.addEventListener('DOMContentLoaded', () => {
   }, 3000);
 
 });
+
+
+
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', function(e) {
+    const targetId = this.getAttribute('href').slice(1);
+    const target = document.getElementById(targetId);
+    if (!target) return;
+
+    e.preventDefault(); // evitar comportamiento por defecto
+
+    // Cerrar offcanvas primero si está abierto
+    const offcanvasEl = document.querySelector('.offcanvas.show');
+    if (offcanvasEl) {
+      const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
+      bsOffcanvas.hide();
+      // Esperar a que termine la animación antes de scrollear
+      offcanvasEl.addEventListener('hidden.bs.offcanvas', () => {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, { once: true });
+    } else {
+      // Si el offcanvas no está abierto, simplemente hacer scroll
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+
+document.getElementById('servicio1m-link').addEventListener('click', handleServiceClick);
+document.getElementById('servicio2m-link').addEventListener('click', handleServiceClick);
+
+function handleServiceClick(e) {
+  e.preventDefault();
+  const targetUrl = this.getAttribute('href');
+  const menu = document.getElementById('menuMovil');
+  const offcanvasInstance = bootstrap.Offcanvas.getInstance(menu);
+
+  if (offcanvasInstance) {
+    offcanvasInstance.hide();
+    menu.addEventListener('hidden.bs.offcanvas', () => {
+      window.location.href = targetUrl;
+    }, { once: true });
+  } else {
+    window.location.href = targetUrl;
+  }
+}
+
