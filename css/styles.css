@@ -4,7 +4,7 @@ body {
 }
 
 .seccion-fondo {
-  background-image: url(/img/images/madera1.jpg);
+  background-image: url(../img/madera1.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -138,22 +138,22 @@ body {
 }
 
 .servicio-1 {
-  background-image: url(/img/images/hero_1.jpg);
+  background-image: url(../img/hero_1.jpg);
 }
 .servicio-2 {
-  background-image: url(/img/images/hero_2.jpg);
+  background-image: url(../img/hero_2.jpg);
 }
 .servicio-3 {
-  background-image: url(/img/images/hero_3.jpg);
+  background-image: url(../img/hero_3.jpg);
 }
 .servicio-4 {
-  background-image: url(/img/images/hero_4.jpg);
+  background-image: url(../img/hero_4.jpg);
 }
 .servicio-5 {
-  background-image: url(/img/images/hero_5.jpg);
+  background-image: url(../img/hero_5.jpg);
 }
 .servicio-6 {
-  background-image: url(/img/images/hero_6.jpg);
+  background-image: url(../img/hero_6.jpg);
 }
 
 /* CONTACTENOS */
