@@ -1,6 +1,6 @@
 html,
 body {
-
+  font-family: sans-serif;
   background-color: #ffffff;
 }
 
@@ -222,4 +222,36 @@ iframe, .frame-map {
 /* Asegura que el offcanvas quede encima del header */
 .offcanvas {
   z-index: 1060 !important; /* mayor que el header */
+}
+
+/* ARCHIVO CONTACTENOS */
+.contacto {
+  height: 16rem; /* Ajusta la altura */
+  background-image: url('../img/img-contactenos.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.contacto::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6); /* Oscurece la imagen */
+  z-index: 1;
+}
+
+.contacto h2 {
+  position: relative;
+  z-index: 2; /* Para que el texto quede arriba del overlay */
+}
+
+.contact-us{
+  margin-top: 7.5rem;
+}
+
+.font-sc{
+  font-size: 2.3rem;
 }
