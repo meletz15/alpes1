@@ -37,7 +37,7 @@ body {
 
 /* HERO SECTION */
 .hero {
-  padding-top: 8.2rem; /* si tu header es fijo */
+  padding-top: 8rem; /* si tu header es fijo */
 }
 
 .hero{
@@ -217,4 +217,9 @@ small{
 iframe, .frame-map {
   width: 100%;
   height: 24rem;
+}
+
+/* Asegura que el offcanvas quede encima del header */
+.offcanvas {
+  z-index: 1060 !important; /* mayor que el header */
 }
