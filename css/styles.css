@@ -5,7 +5,7 @@ body {
 }
 
 .seccion-fondo {
-  background-image: url(../img/madera1.jpg);
+  background-image: url(../img/general/madera1.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -81,7 +81,7 @@ body {
   width: 100%;
   gap: 3rem;
   min-height: 97vh;
-  background-image: url(../img/sierra.png);
+  background-image: url(../img/general/sierra.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -134,23 +134,50 @@ body {
   z-index: 1;
 }
 
-.servicio-1 {
-  background-image: url(../img/hero_1.jpg);
+/* SERVICIOS DE MUEBLERIA IMAGENES DE PORTADA */
+.servicio-1m {
+  background-image: url(../img/general/hero_1.jpg);
 }
-.servicio-2 {
-  background-image: url(../img/hero_2.jpg);
+.servicio-2m {
+  background-image: url(../img/general/hero_2.jpg);
 }
-.servicio-3 {
-  background-image: url(../img/hero_3.jpg);
+.servicio-3m {
+  background-image: url(../img/general/hero_3.jpg);
 }
-.servicio-4 {
-  background-image: url(../img/hero_4.jpg);
+.servicio-4m {
+  background-image: url(../img/general/hero_4.jpg);
 }
-.servicio-5 {
-  background-image: url(../img/hero_5.jpg);
+.servicio-5m {
+  background-image: url(../img/general/hero_5.jpg);
 }
-.servicio-6 {
-  background-image: url(../img/hero_6.jpg);
+.servicio-6m {
+  background-image: url(../img/general/hero_6.jpg);
+}
+.servicio-7m {
+  background-image: url(../img/general/img_8.jpg);
+}
+
+/*SERVICIOS DE CIELO RASO IMAGENES DE PORTADA */
+.servicio-1c {
+  background-image: url(../img/general/hero_1.jpg);
+}
+.servicio-2c {
+  background-image: url(../img/general/hero_2.jpg);
+}
+.servicio-3c {
+  background-image: url(../img/general/hero_3.jpg);
+}
+.servicio-4c {
+  background-image: url(../img/general/hero_4.jpg);
+}
+.servicio-5c {
+  background-image: url(../img/general/hero_5.jpg);
+}
+.servicio-6c {
+  background-image: url(../img/general/hero_6.jpg);
+}
+.servicio-7c {
+  background-image: url(../img/general/img_8.jpg);
 }
 
 /* CONTACTENOS */
@@ -227,7 +254,7 @@ iframe, .frame-map {
 /* ARCHIVO CONTACTENOS */
 .contacto {
   height: 16rem; /* Ajusta la altura */
-  background-image: url('../img/img-contactenos.jpg');
+  background-image: url('../img/general/img-contactenos.jpg');
   background-size: cover;
   background-position: center;
 }
