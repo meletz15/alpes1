@@ -72,6 +72,11 @@ body {
   height: 30rem;
 }
 
+#quienes-somos {
+  scroll-margin-top: 95px;
+}
+
+
 .section-1 {
   border-bottom: 3px solid #488e48;
 }
