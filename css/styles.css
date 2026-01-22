@@ -360,3 +360,7 @@ iframe, .frame-map {
   overflow: hidden;
   height: 100vh;
 }
+
+footer{
+  background-color: #4C4C4C;
+}
