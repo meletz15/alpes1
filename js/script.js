@@ -73,3 +73,14 @@ function handleServiceClick(e) {
   }
 }
 
+//MODAL PARA GALERIA DE IMGS
+const imagenes = document.querySelectorAll('.img-galeria');
+  const imagenModal = document.getElementById('imagenModal');
+  const modal = new bootstrap.Modal(document.getElementById('modalImagen'));
+
+  imagenes.forEach(img => {
+    img.addEventListener('click', () => {
+      imagenModal.src = img.src;
+      modal.show();
+    });
+  });
