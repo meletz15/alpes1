@@ -257,25 +257,39 @@ iframe, .frame-map {
 }
 
 /* ARCHIVO CONTACTENOS */
-.contacto {
-  height: 7.1rem; /* Ajusta la altura */
+.contacto{
+    height: 16rem; /* ajusta según tu diseño */
+    background-image: url("../img/general/img-contactenos.jpg");
+    background-size: cover;
+    background-position: center;
+    margin-top: 7.5rem;
+}
+
+/* Overlay de transparencia */
+.contacto::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); /* transparencia */
+    z-index: 1;
+}
+
+/* Texto por encima del overlay */
+.contacto h2 {
+    z-index: 2;
+}
+
+/* TITULO DE LOS SERVICIOS */
+
+.service-main {
+  height: 7.1rem;
   margin-top: 7.5rem;
   background-size: cover;
   background-position: center;
-}
+   background-color: #ffc107;
+} 
 
-.contacto::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #ffc107; /* Oscurece la imagen */
-  z-index: 1;
-}
-
-.contacto h2 {
+.service-main h2 {
   position: relative;
   z-index: 2; /* Para que el texto quede arriba del overlay */
 }
