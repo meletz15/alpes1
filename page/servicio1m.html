@@ -372,8 +372,14 @@
 <!-- MODAL DE BOOTSTRAP PARA GALERIA DE IMGS -->
 <div class="modal fade" id="modalImagen" tabindex="-1">
   <div class="modal-dialog modal-fullscreen">
-    <div class="modal-content border-0">
+    <div class="modal-content modal-fondo border-0">
       <div class="modal-body p-0 overflow-hidden position-relative">
+
+        <!-- Indicador -->
+        <div id="contador" class="contador">1 / 1</div>
+
+        <!-- Botón cerrar -->
+        <button id="cerrarModal" class="btn-cerrar">✕</button>
 
         <!-- Imagen -->
         <img id="imagenModal" />
@@ -386,6 +392,7 @@
     </div>
   </div>
 </div>
+
 
 
 
