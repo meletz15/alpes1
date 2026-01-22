@@ -74,26 +74,76 @@ function handleServiceClick(e) {
 }
 
 //MODAL PARA GALERIA DE IMGS
-document.addEventListener("DOMContentLoaded", () => {
+const imagenes = document.querySelectorAll(".img-galeria");
+const imagenModal = document.getElementById("imagenModal");
+const modal = new bootstrap.Modal(document.getElementById("modalImagen"));
+const modalEl = document.getElementById("modalImagen");
 
-  const imagenes = document.querySelectorAll(".img-galeria");
-  const imagenModal = document.getElementById("imagenModal");
-  const modalElement = document.getElementById("modalImagen");
+let index = 0;
+let startX = 0;
+let startY = 0;
+let moveX = 0;
+let moveY = 0;
 
-  if (!imagenes.length || !imagenModal || !modalElement) {
-    console.error("No se encontraron elementos del modal o imágenes");
+// abrir modal
+imagenes.forEach((img, i) => {
+  img.addEventListener("click", () => {
+    index = i;
+    imagenModal.src = img.src;
+    resetTransform();
+    modal.show();
+  });
+});
+
+// reset posición
+function resetTransform() {
+  moveX = moveY = 0;
+  imagenModal.style.transform = `translate(-50%, -50%)`;
+}
+
+// slider
+function showImage(i) {
+  if (i < 0) i = imagenes.length - 1;
+  if (i >= imagenes.length) i = 0;
+  index = i;
+  imagenModal.src = imagenes[index].src;
+  resetTransform();
+}
+
+// botones
+document.querySelector(".prev").onclick = () => showImage(index - 1);
+document.querySelector(".next").onclick = () => showImage(index + 1);
+
+// TOUCH EVENTS
+imagenModal.addEventListener("touchstart", e => {
+  startX = e.touches[0].clientX;
+  startY = e.touches[0].clientY;
+});
+
+imagenModal.addEventListener("touchmove", e => {
+  const x = e.touches[0].clientX - startX;
+  const y = e.touches[0].clientY - startY;
+
+  // arrastrar imagen
+  imagenModal.style.transform =
+    `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`;
+
+  moveX = x;
+  moveY = y;
+});
+
+imagenModal.addEventListener("touchend", () => {
+
+  // deslizar abajo para cerrar
+  if (moveY > 120) {
+    modal.hide();
     return;
   }
 
-  const modal = new bootstrap.Modal(modalElement);
+  // swipe lateral
+  if (Math.abs(moveX) > 80) {
+    moveX > 0 ? showImage(index - 1) : showImage(index + 1);
+  }
 
-  imagenes.forEach(img => {
-    img.addEventListener("click", () => {
-      imagenModal.src = img.src;
-      modal.show();
-    });
-  });
-
+  resetTransform();
 });
-
-imagenModal.addEventListener("click", () => modal.hide());

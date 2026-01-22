@@ -372,13 +372,21 @@
 <!-- MODAL DE BOOTSTRAP PARA GALERIA DE IMGS -->
 <div class="modal fade" id="modalImagen" tabindex="-1">
   <div class="modal-dialog modal-fullscreen">
-    <div class="modal-content bg-black border-0">
-      <div class="modal-body p-0 d-flex justify-content-center align-items-center">
-        <img id="imagenModal" alt="Imagen ampliada">
+    <div class="modal-content border-0">
+      <div class="modal-body p-0 overflow-hidden position-relative">
+
+        <!-- Imagen -->
+        <img id="imagenModal" />
+
+        <!-- Flechas -->
+        <button class="nav prev">‹</button>
+        <button class="nav next">›</button>
+
       </div>
     </div>
   </div>
 </div>
+
 
 
 
