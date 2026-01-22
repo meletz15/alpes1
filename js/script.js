@@ -95,3 +95,5 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
+imagenModal.addEventListener("click", () => modal.hide());
