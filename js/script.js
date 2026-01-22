@@ -74,13 +74,24 @@ function handleServiceClick(e) {
 }
 
 //MODAL PARA GALERIA DE IMGS
-const imagenes = document.querySelectorAll('.img-galeria');
-  const imagenModal = document.getElementById('imagenModal');
-  const modal = new bootstrap.Modal(document.getElementById('modalImagen'));
+document.addEventListener("DOMContentLoaded", () => {
+
+  const imagenes = document.querySelectorAll(".img-galeria");
+  const imagenModal = document.getElementById("imagenModal");
+  const modalElement = document.getElementById("modalImagen");
+
+  if (!imagenes.length || !imagenModal || !modalElement) {
+    console.error("No se encontraron elementos del modal o imágenes");
+    return;
+  }
+
+  const modal = new bootstrap.Modal(modalElement);
 
   imagenes.forEach(img => {
-    img.addEventListener('click', () => {
+    img.addEventListener("click", () => {
       imagenModal.src = img.src;
       modal.show();
     });
   });
+
+});
