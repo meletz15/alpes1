@@ -5,7 +5,7 @@ body {
 }
 
 .seccion-fondo {
-  background-image: url(../img/general/madera1.jpg);
+  background-image: url(../img/general/madera1.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -86,7 +86,7 @@ body {
   width: 100%;
   gap: 3rem;
   min-height: 97vh;
-  background-image: url(../img/general/sierra.png);
+  background-image: url(../img/general/sierra.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
