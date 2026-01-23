@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Construccion, ingenieria y acabados en drywall</title>
+    <title>Centro de entretenimiento</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
@@ -47,7 +47,31 @@
     <main>
         <div
             class="service-main position-relative text-center text-white d-flex align-items-center justify-content-center">
-            <h2 class="fw-bold font-sc">Construccion, ingenieria y acabados en drywall</h2>
+            <h2 class="fw-bold font-sc">Centro de entretenimiento</h2>
+        </div>
+
+        <div class="container my-3">
+            <div class="row g-2 galeria">
+                <div class="col-6">
+                    <img src="../img/cieloRaso/centroEntretenimiento/img1.webp" class="img-fluid rounded img-galeria"
+                        alt="Imagen 1">
+                </div>
+
+                <div class="col-6">
+                    <img src="../img/cieloRaso/centroEntretenimiento/img2.webp" class="img-fluid rounded img-galeria"
+                        alt="Imagen 2">
+                </div>
+
+                <div class="col-6">
+                    <img src="../img/cieloRaso/centroEntretenimiento/img3.webp" class="img-fluid rounded img-galeria"
+                        alt="Imagen 3">
+                </div>
+
+                <div class="col-6">
+                    <img src="../img/cieloRaso/centroEntretenimiento/img4.webp" class="img-fluid rounded img-galeria"
+                        alt="Imagen 4">
+                </div>
+            </div>
         </div>
 
         <section class="container" style="min-height: 23vh;">
@@ -317,7 +341,31 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="../js/script.js" defer></script>
 </body>
+
+<!-- MODAL DE BOOTSTRAP PARA GALERIA DE IMGS -->
+<div class="modal fade" id="modalImagen" tabindex="-1">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content modal-fondo border-0">
+            <div class="modal-body p-0 overflow-hidden position-relative">
+
+                <!-- Indicador -->
+                <div id="contador" class="contador">1 / 1</div>
+
+                <!-- Botón cerrar -->
+                <button id="cerrarModal" class="btn-cerrar">✕</button>
+
+                <!-- Imagen -->
+                <img id="imagenModal" />
+
+                <!-- Flechas -->
+                <button class="nav prev">‹</button>
+                <button class="nav next">›</button>
+
+            </div>
+        </div>
+    </div>
+</div>
 
 </html>
