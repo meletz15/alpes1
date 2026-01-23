@@ -164,7 +164,7 @@ body {
 
 /*SERVICIOS DE CIELO RASO IMAGENES DE PORTADA */
 .servicio-1c {
-  background-image: url(../img/general/hero_1.jpg);
+  background-image: url(../img/cieloRaso/cielo_raso/img14.webp);
 }
 .servicio-2c {
   background-image: url(../img/general/hero_2.jpg);
@@ -183,6 +183,9 @@ body {
 }
 .servicio-7c {
   background-image: url(../img/general/img_8.jpg);
+}
+.servicio-8c {
+  background-image: url(../img/cieloRaso/centroEntretenimiento/img4.webp);
 }
 
 /* CONTACTENOS */
