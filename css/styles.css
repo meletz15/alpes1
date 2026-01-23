@@ -259,7 +259,7 @@ iframe, .frame-map {
 /* ARCHIVO CONTACTENOS */
 .contacto{
     height: 16rem; /* ajusta según tu diseño */
-    background-image: url("../img/general/img-contactenos.jpg");
+    background-image: url("../img/general/img-contactenos.webp");
     background-size: cover;
     background-position: center;
     margin-top: 7.5rem;
