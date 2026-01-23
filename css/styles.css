@@ -141,22 +141,22 @@ body {
 
 /* SERVICIOS DE MUEBLERIA IMAGENES DE PORTADA */
 .servicio-1m {
-  background-image: url(../img/muebleria/cocina_integral/img4.jpg);
+  background-image: url(../img/muebleria/cocina_integral/img4.webp);
 }
 .servicio-2m {
-  background-image: url(../img/muebleria/closets/img12.jpg);
+  background-image: url(../img/muebleria/closets/img12.webp);
 }
 .servicio-3m {
-  background-image: url(../img/muebleria/mobiliario_para_oficinas/img2.jpg);
+  background-image: url(../img/muebleria/mobiliario_para_oficinas/img2.webp);
 }
 .servicio-4m {
-  background-image: url(../img/muebleria/muebles_comercial/img9.jpg);
+  background-image: url(../img/muebleria/muebles_comercial/img9.webp);
 }
 .servicio-5m {
-  background-image: url(../img/muebleria/centro_entretenimiento/img7.jpg);
+  background-image: url(../img/muebleria/centro_entretenimiento/img7.webp);
 }
 .servicio-6m {
-  background-image: url(../img/muebleria/recepciones/img5.jpg);
+  background-image: url(../img/muebleria/recepciones/img5.webp);
 }
 .servicio-7m {
   background-image: url(../img/muebleria/mesa_reunion/img1.jpeg);
@@ -279,7 +279,7 @@ iframe, .frame-map {
     z-index: 2;
 }
 
-/* TITULO DE LOS SERVICIOS */
+/* TITULO DE LOS SERVICwebp */
 
 .service-main {
   height: 7.1rem;
