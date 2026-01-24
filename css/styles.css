@@ -4,6 +4,7 @@ body {
   background-color: #ffffff;
 }
 
+/* HEADER */
 .seccion-fondo {
   background-image: url(../img/general/madera1.jpg);
   background-size: cover;
@@ -21,7 +22,6 @@ body {
   width: 100%;
 }
 
-/* Logo */
 .fig-img {
   width: 100%;
   max-width: 12rem;
@@ -46,8 +46,14 @@ body {
   display: block;
 }
 
-.img-fluid {
+/* .img-fluid {
   width: 100%;
+  height: 9.5rem;
+  object-fit: cover;
+  display: block;
+} */
+
+.hero-thumb {
   height: 9.5rem;
   object-fit: cover;
   display: block;
@@ -64,6 +70,7 @@ body {
   display: block;
 }
 
+/* QUIENES SOMOS */
 .Qsomos {
   width: 95%;
   height: 30rem;
@@ -375,4 +382,57 @@ iframe,
 
 footer {
   background-color: #4c4c4c;
+}
+
+/* VISTA TABLET */
+@media (min-width: 768px) {
+  /* HEADER */
+  /* .seccion-fondo {
+    height: 6.5rem;
+    padding-top: 0;
+    height: 9rem;
+  } */
+
+  /* .fig-img {
+    max-width: 14rem;
+  }
+
+  .img-logo {
+    width: 70%;
+  } */
+
+  /* HERO SECTION */
+  .hero {
+    padding-top: 9.5rem;
+  }
+
+  .hero-thumb {
+    height: 16rem;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
+  .img-hero1 {
+    max-height: 24rem;
+    margin-top: 2rem;
+  }
+
+  .hero-img {
+    width: 95%;
+    height: 24rem;
+  }
+
+  /* TITULO DE LOS SERVICwebp */
+  .service-main {
+    height: 7.1rem;
+    margin-top: 7.5rem;
+    background-size: cover;
+    background-position: center;
+    background-color: #ffc107;
+  }
+
+  /* IMAGENES DE CADA SERVICIO */
+  .img-galeria {
+    aspect-ratio: 4 / 3;
+  }
 }
