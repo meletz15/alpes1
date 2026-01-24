@@ -9,7 +9,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 7.5rem; /* altura móvil */
+  height: 7.5rem;
   padding-top: 0.5rem;
   z-index: 1050;
 }
@@ -34,38 +34,35 @@ body {
   border: 1px solid #000;
 }
 
-
 /* HERO SECTION */
 .hero {
-  padding-top: 8rem; /* si tu header es fijo */
+  padding-top: 8rem;
 }
 
-.hero{
+.hero {
   width: 100%;
   height: auto;
   object-fit: cover;
   display: block;
 }
 
-.img-fluid{
+.img-fluid {
   width: 100%;
   height: 9.5rem;
   object-fit: cover;
   display: block;
 }
 
-.img-hero1{
-  max-height: 18rem; /* limita altura si quieres */
-  
+.img-hero1 {
+  max-height: 18rem;
 }
 
 .hero-img {
   width: 97%;
-  height: 18rem; /* altura fija para hero principal */
+  height: 18rem;
   object-fit: cover;
   display: block;
 }
-
 
 .Qsomos {
   width: 95%;
@@ -75,7 +72,6 @@ body {
 #quienes-somos {
   scroll-margin-top: 95px;
 }
-
 
 .section-1 {
   border-bottom: 3px solid #488e48;
@@ -96,7 +92,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.7); /* oscuridad */
+  background: rgba(0, 0, 0, 0.7);
 }
 
 /* contenido encima */
@@ -107,7 +103,7 @@ body {
 }
 
 .icon-service {
-  color: #ffc107; /* amarillo */
+  color: #ffc107;
   font-size: 3.7rem;
 }
 
@@ -129,7 +125,6 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  /* background: rgba(0,0,0,0.1); */
   border-radius: 12px;
 }
 
@@ -189,7 +184,6 @@ body {
 }
 
 /* CONTACTENOS */
-
 .subtitle {
   font-size: 1.3rem;
 }
@@ -233,7 +227,7 @@ body {
 }
 
 .btn-send {
-  background: #478C46;
+  background: #478c46;
   color: white;
   border-radius: 25px;
   padding: 0.6rem;
@@ -241,63 +235,62 @@ body {
   font-size: 1.5rem;
 }
 
-.direction-text{
+.direction-text {
   font-size: 1.2rem;
 }
 
-small{
+small {
   font-size: 1.3rem;
 }
 
-iframe, .frame-map {
+iframe,
+.frame-map {
   width: 100%;
   height: 24rem;
 }
 
-/* Asegura que el offcanvas quede encima del header */
 .offcanvas {
-  z-index: 1060 !important; /* mayor que el header */
+  z-index: 1060 !important;
 }
 
 /* ARCHIVO CONTACTENOS */
-.contacto{
-    height: 16rem; /* ajusta según tu diseño */
-    background-image: url("../img/general/img-contactenos.webp");
-    background-size: cover;
-    background-position: center;
-    margin-top: 7.5rem;
+.contacto {
+  height: 16rem;
+  background-image: url("../img/general/img-contactenos.webp");
+  background-size: cover;
+  background-position: center;
+  margin-top: 7.5rem;
 }
 
 /* Overlay de transparencia */
 .contacto::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5); /* transparencia */
-    z-index: 1;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 /* Texto por encima del overlay */
 .contacto h2 {
-    z-index: 2;
+  z-index: 2;
 }
 
 /* TITULO DE LOS SERVICwebp */
-
 .service-main {
   height: 7.1rem;
   margin-top: 7.5rem;
   background-size: cover;
   background-position: center;
-   background-color: #ffc107;
-} 
+  background-color: #ffc107;
+}
 
 .service-main h2 {
   position: relative;
-  z-index: 2; /* Para que el texto quede arriba del overlay */
+  z-index: 2;
 }
 
-.font-sc{
+.font-sc {
   font-size: 2.2rem;
   color: black;
 }
@@ -309,9 +302,8 @@ iframe, .frame-map {
 }
 
 /* IMAGEN MODAL */
-/* Fondo semitransparente */
 .modal-fondo {
-  background: rgba(0,0,0,0.85);
+  background: rgba(0, 0, 0, 0.85);
 }
 
 /* Imagen */
@@ -326,7 +318,6 @@ iframe, .frame-map {
   touch-action: none;
   transition: transform 0.25s ease;
 }
-
 
 /* Indicador */
 .contador {
@@ -369,8 +360,12 @@ iframe, .frame-map {
   opacity: 1;
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
 
 /* Bloqueo scroll */
 .no-scroll {
@@ -378,6 +373,6 @@ iframe, .frame-map {
   height: 100vh;
 }
 
-footer{
-  background-color: #4C4C4C;
+footer {
+  background-color: #4c4c4c;
 }
