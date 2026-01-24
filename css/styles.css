@@ -53,12 +53,6 @@ body {
   display: block;
 }
 
-/* .hero-thumb {
-  height: 9.5rem;
-  object-fit: cover;
-  display: block;
-} */
-
 .img-hero1 {
   max-height: 18rem;
 }
@@ -436,4 +430,74 @@ footer {
   .img-galeria {
     aspect-ratio: 4 / 3;
   }
+}
+
+/* VISTA DESKTOP */
+@media (min-width: 992px) {
+  .hero {
+    padding-top: 8rem;
+  }
+
+  .hero-thumb {
+    height: 16rem;
+  }
+
+  .img-hero1 {
+    margin-left: 55rem;
+    width: auto;
+    
+  }
+
+  .hero-img{
+    margin-top: 1rem;
+  }
+
+  .Qsomos {
+
+    margin-top: -18rem;
+  }
+
+  .section-2{
+    width: 45rem;
+  }
+
+  .section-1{
+    border-bottom: 2px solid #000;
+    width: 45rem;
+  }
+
+.items-icon {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  /* grid profesional */
+  .servicios-desk {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* tarjetas más bajas */
+  .link-container {
+    height: 11rem;
+    width: 100%;
+    border-radius: 14px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* efecto hover */
+  .link-container:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  }
+
+  /* texto más limpio */
+  .link-container h4 {
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background: rgba(0, 0, 0, 0.65);
+  }
+
 }
