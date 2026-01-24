@@ -46,18 +46,18 @@ body {
   display: block;
 }
 
-/* .img-fluid {
+.img-fluid {
   width: 100%;
   height: 9.5rem;
   object-fit: cover;
   display: block;
-} */
+}
 
-.hero-thumb {
+/* .hero-thumb {
   height: 9.5rem;
   object-fit: cover;
   display: block;
-}
+} */
 
 .img-hero1 {
   max-height: 18rem;
@@ -402,15 +402,16 @@ footer {
   } */
 
   /* HERO SECTION */
-  .hero {
+  /* .hero {
     padding-top: 9.5rem;
   }
 
   .hero-thumb {
-    height: 16rem;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-  }
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
 
   .img-hero1 {
     max-height: 24rem;
@@ -420,7 +421,7 @@ footer {
   .hero-img {
     width: 95%;
     height: 24rem;
-  }
+  } */
 
   /* TITULO DE LOS SERVICwebp */
   .service-main {
