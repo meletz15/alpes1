@@ -213,3 +213,14 @@ function preload() {
 }
 preload();
 
+document.querySelectorAll('.play-video').forEach(button => {
+    button.addEventListener('click', () => {
+      const iframeId = button.getAttribute('data-video');
+      const iframe = document.getElementById(iframeId);
+
+      if (!iframe) return;
+
+      const baseSrc = iframe.src.split('?')[0];
+      iframe.src = baseSrc + '?autoplay=1';
+    });
+  });

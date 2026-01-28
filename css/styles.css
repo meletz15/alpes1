@@ -373,6 +373,36 @@ footer {
   background-color: #4c4c4c;
 }
 
+.video-card {
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+}
+
+/* info debajo del video */
+.video-info {
+  padding: 0.6rem;
+  text-align: center;
+}
+
+.video-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  line-height: 1.2;
+}
+
+/* botón más agradable */
+.video-info .btn {
+  border-radius: 999px;
+  font-size: 0.75rem;
+  padding: 0.35rem 0;
+}
+
+
 /* VISTA TABLET */
 @media (min-width: 768px) {
   
