@@ -51,6 +51,64 @@
             <h2 class="fw-bold font-sc">Diseño, pintura residencial y comercial</h2>
         </div>
 
+        <div class="container my-3">
+            <div class="row g-2 galeria">
+
+                <div class="col-6 col-md-4">
+                    <img src="../img/cieloRaso/diseñoPintura/img1.jpeg" class="img-fluid rounded img-galeria"
+                        alt="Imagen 1">
+                </div>
+
+                <div class="col-6 col-md-4">
+                    <img src="../img/cieloRaso/diseñoPintura/img2.jpeg" class="img-fluid rounded img-galeria"
+                        alt="Imagen 2">
+                </div>
+
+                <div class="col-6 col-md-4">
+                    <img src="../img/cieloRaso/diseñoPintura/img3.jpeg" class="img-fluid rounded img-galeria"
+                        alt="Imagen 3">
+                </div>
+
+                <div class="col-6 col-md-4">
+                    <img src="../img/cieloRaso/diseñoPintura/img4.jpeg" class="img-fluid rounded img-galeria"
+                        alt="Imagen 4">
+                </div>
+
+                <div class="col-6 col-md-4">
+                    <img src="../img/cieloRaso/diseñoPintura/img5.jpeg" class="img-fluid rounded img-galeria"
+                        alt="Imagen 2">
+                </div>
+
+                <div class="col-6 col-md-4">
+                    <img src="../img/cieloRaso/diseñoPintura/img6.jpeg" class="img-fluid rounded img-galeria"
+                        alt="Imagen 3">
+                </div>
+
+                <div class="col-6 col-md-4">
+                    <img src="../img/cieloRaso/diseñoPintura/img7.jpeg" class="img-fluid rounded img-galeria"
+                        alt="Imagen 4">
+                </div>
+
+                <div class="col-6 col-md-4">
+                    <img src="../img/cieloRaso/diseñoPintura/img8.jpeg" class="img-fluid rounded img-galeria"
+                        alt="Imagen 3">
+                </div>
+
+                <div class="col-6 col-md-4">
+                    <img src="../img/cieloRaso/diseñoPintura/img9.jpeg" class="img-fluid rounded img-galeria"
+                        alt="Imagen 4">
+                </div>
+                <div class="col-6 col-md-4">
+                    <img src="../img/cieloRaso/diseñoPintura/img10.jpeg" class="img-fluid rounded img-galeria"
+                        alt="Imagen 4">
+                </div>
+                <div class="col-6 col-md-4">
+                    <img src="../img/cieloRaso/diseñoPintura/img11.jpeg" class="img-fluid rounded img-galeria"
+                        alt="Imagen 4">
+                </div>
+            </div>
+        </div>
+
         <section class="container" style="min-height: 23vh;">
             <div class="row g-3 text-dark py-3">
                 <div class="col-12 px-3">
@@ -308,7 +366,31 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="../js/script.js" defer></script>
 </body>
+
+<!-- MODAL DE BOOTSTRAP PARA GALERIA DE IMGS -->
+<div class="modal fade" id="modalImagen" tabindex="-1">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content modal-fondo border-0">
+      <div class="modal-body p-0 overflow-hidden position-relative">
+
+        <!-- Indicador -->
+        <div id="contador" class="contador">1 / 1</div>
+
+        <!-- Botón cerrar -->
+        <button id="cerrarModal" class="btn-cerrar">✕</button>
+
+        <!-- Imagen -->
+        <img id="imagenModal" />
+
+        <!-- Flechas -->
+        <button class="nav prev">‹</button>
+        <button class="nav next">›</button>
+
+      </div>
+    </div>
+  </div>
+</div>
 
 </html>
