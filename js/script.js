@@ -225,15 +225,4 @@ document.querySelectorAll('.play-video').forEach(button => {
     });
   });
 
-
-  const iframe = document.getElementById('modalVideo');
-
-  modal.addEventListener('show.bs.modal', event => {
-    const button = event.relatedTarget;
-    const videoId = button.getAttribute('data-video-id');
-    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
-  });
-
-  modal.addEventListener('hidden.bs.modal', () => {
-    iframe.src = '';
-  });
+  

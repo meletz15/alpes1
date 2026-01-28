@@ -378,36 +378,39 @@ footer {
   overflow: hidden;
   background: #fff;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
-  display: flex;
-  flex-direction: column;
-  
+}
+
+/* altura correcta del video */
+.ratio-custom {
+  --bs-aspect-ratio: 70%;
+}
+
+/* desde tablet vuelve a 16:9 */
+@media (min-width: 577px) {
+  .ratio-custom {
+    --bs-aspect-ratio: 56.25%;
+  }
 }
 
 /* info debajo del video */
 .video-info {
-  padding: 0.6rem;
+  padding: 0.8rem;
   text-align: center;
 }
 
 .video-title {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 600;
   margin-bottom: 0.4rem;
   line-height: 1.2;
 }
 
-/* botón más agradable */
+/* botón agradable */
 .video-info .btn {
   border-radius: 999px;
   font-size: 0.75rem;
-  padding: 0.35rem 0;
+  padding: 0.4rem 0;
 }
-
-.ratio-custom {
-  --bs-aspect-ratio: 100%; /* antes 56.25% */
-}
-
-
 
 
 
