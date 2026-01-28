@@ -380,6 +380,7 @@ footer {
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
+  
 }
 
 /* info debajo del video */
@@ -401,6 +402,11 @@ footer {
   font-size: 0.75rem;
   padding: 0.35rem 0;
 }
+
+.ratio-custom {
+  --bs-aspect-ratio: 100%; /* antes 56.25% */
+}
+
 
 
 /* VISTA TABLET */
