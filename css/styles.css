@@ -414,7 +414,7 @@ footer {
 }
 
 /* ===== TABLET / 750px: 2 columnas ===== */
-@media (min-width: 700px) and (max-width: 767px) {
+@media (min-width: 600px) and (max-width: 767px) {
   .servicios-mobil-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -426,15 +426,14 @@ footer {
   }
 
   .servicios-mobil-container .link-container {
+    height: 300px;       /* altura aumentada */
     margin-top: 2rem !important;
-    height: 260px;
-    height: 300px;
     border-radius: 0.5rem;
     text-align: center;
     font-size: 0.9rem;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center;  /* centrado vertical */
+    justify-content: center; /* centrado horizontal */
   }
 }
 
