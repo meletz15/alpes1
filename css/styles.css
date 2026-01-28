@@ -13,6 +13,7 @@ body {
   height: 7.5rem;
   padding-top: 0.5rem;
   z-index: 1050;
+  border-bottom: #000 1px solid;
 }
 
 .fixed-top {
