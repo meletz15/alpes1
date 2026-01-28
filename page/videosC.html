@@ -482,4 +482,35 @@
     </div>
 </div>
 
+<!-- BOTÓN -->
+<button
+  type="button"
+  class="btn btn-sm btn-primary w-100 open-video"
+  data-bs-toggle="modal"
+  data-bs-target="#videoModal"
+  data-video-id="ROGzVOs6x-c">
+  Ver video
+</button>
+
+<!-- MODAL -->
+<div class="modal fade" id="videoModal" tabindex="-1">
+  <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-centered">
+    <div class="modal-content bg-black">
+      <div class="modal-header border-0">
+        <button type="button" class="btn-close btn-close-white"
+          data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body p-0">
+        <div class="ratio ratio-16x9">
+          <iframe id="modalVideo"
+            allow="autoplay; fullscreen"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 </html>
