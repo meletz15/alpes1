@@ -413,6 +413,31 @@ footer {
   }
 }
 
+/* ===== TABLET / 750px: 2 columnas ===== */
+@media (min-width: 700px) and (max-width: 767px) {
+  .servicios-mobil-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .servicios-mobil-container a {
+    display: block;
+  }
+
+  .servicios-mobil-container .link-container {
+    margin-top: 2rem !important;
+    height: 260px;
+    height: 300px;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 /* VISTA DESKTOP */
 @media (min-width: 992px) {
   .hero {
