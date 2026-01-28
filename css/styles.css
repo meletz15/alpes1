@@ -418,7 +418,7 @@ footer {
   .servicios-mobil-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    gap: 0.5rem;
   }
 
   .servicios-mobil-container a {
@@ -434,6 +434,12 @@ footer {
     display: flex;
     align-items: center;  /* centrado vertical */
     justify-content: center; /* centrado horizontal */
+  }
+
+   .galeria img {
+    height: 260px;       /* ajusta la altura que quieras */
+    object-fit: cover;   /* rellena sin deformar */
+    width: 100%;         /* mantiene ancho responsive */
   }
 }
 
