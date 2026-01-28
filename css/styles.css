@@ -6,7 +6,7 @@ body {
 
 /* HEADER */
 .seccion-fondo {
-  background-image: url(../img/general/madera1.jpg);
+  background-image: url(../img/general/header_fondo.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -177,7 +177,6 @@ body {
 .servicio-6c {
   background-image: url(../img/cieloRaso/centroEntretenimiento/img4.jpeg);
 }
-
 
 /* CONTACTENOS */
 .subtitle {
@@ -375,42 +374,7 @@ footer {
 
 /* VISTA TABLET */
 @media (min-width: 768px) {
-  /* HEADER */
-  /* .seccion-fondo {
-    height: 6.5rem;
-    padding-top: 0;
-    height: 9rem;
-  } */
-
-  /* .fig-img {
-    max-width: 14rem;
-  }
-
-  .img-logo {
-    width: 70%;
-  } */
-
-  /* HERO SECTION */
-  /* .hero {
-    padding-top: 9.5rem;
-  }
-
-  .hero-thumb {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  display: block;
-}
-
-  .img-hero1 {
-    max-height: 24rem;
-    margin-top: 2rem;
-  }
-
-  .hero-img {
-    width: 95%;
-    height: 24rem;
-  } */
+  
 
   /* TITULO DE LOS SERVICwebp */
   .service-main {
@@ -424,6 +388,27 @@ footer {
   /* IMAGENES DE CADA SERVICIO */
   .img-galeria {
     aspect-ratio: 4 / 3;
+  }
+
+  .servicios-mobil-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .servicios-mobil-container a {
+    display: block;
+  }
+
+  .servicios-mobil-container .link-container {
+    margin-top: 2rem !important;
+    height: 260px;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -440,59 +425,80 @@ footer {
   .img-hero1 {
     margin-left: 55rem;
     width: auto;
-    
   }
 
-  .hero-img{
+  .hero-img {
     margin-top: 1rem;
   }
 
   .Qsomos {
-
     margin-top: -18rem;
   }
 
-  .section-2{
+  .section-2 {
     width: 45rem;
   }
 
-  .section-1{
+  .section-1 {
     border-bottom: 2px solid #000;
     width: 45rem;
   }
 
-.items-icon {
+  .items-icon {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
 
-  /* grid profesional */
-  .servicios-desk {
+  .servicios-mobil-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .servicios-mobil-container a {
+    display: block;
+    
+  }
+
+  /* Ajuste de márgenes solo en desktop */
+  .servicios-mobil-container .link-container {
+    height: 260px;
+    margin-top: 2rem !important;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .servicios-mobil-container .link-container h4 {
+    font-size: 1.3rem;  /* ajusta aquí el tamaño que quieras */
+  }
+
+  .galeria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
   }
 
-  /* tarjetas más bajas */
-  .link-container {
-    height: 11rem;
+  /* Neutralizamos columnas de Bootstrap solo en desktop */
+  .galeria > div {
     width: 100%;
-    border-radius: 14px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 100%;
+    padding: 0;
   }
 
-  /* efecto hover */
-  .link-container:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+   .galeria img {
+    height: 260px;          /* ajusta aquí si quieres más o menos */
+    object-fit: cover;      /* rellena sin deformar */
   }
 
-  /* texto más limpio */
-  .link-container h4 {
-    font-size: 1.1rem;
-    padding: 0.5rem 1rem;
-    border: none;
-    background: rgba(0, 0, 0, 0.65);
+  .contacto-form {
+    max-width: 600px;      /* ancho fijo para desktop */
+    margin: 0 auto;        /* centrado horizontal */
   }
 
+  .informacion-contacto{
+    text-align: center;
+  }
 }
