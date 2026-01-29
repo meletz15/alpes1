@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener('click', function(e) {
+  link.addEventListener('click', function (e) {
     const targetId = this.getAttribute('href').slice(1);
     const target = document.getElementById(targetId);
     if (!target) return;
@@ -213,16 +213,60 @@ function preload() {
 }
 preload();
 
-document.querySelectorAll('.play-video').forEach(button => {
-    button.addEventListener('click', () => {
-      const iframeId = button.getAttribute('data-video');
-      const iframe = document.getElementById(iframeId);
+function loadVideo(wrapper) {
+  if (!wrapper) return;
 
-      if (!iframe) return;
+  const videoId = wrapper.getAttribute('data-video');
 
-      const baseSrc = iframe.src.split('?')[0];
-      iframe.src = baseSrc + '?autoplay=1';
-    });
+  // Cerrar todos los otros videos primero
+  document.querySelectorAll('.video-wrapper').forEach(other => {
+    if (other !== wrapper) {
+      resetVideo(other);
+    }
   });
 
-  
+  // Evitar recargar si ya existe iframe
+  if (wrapper.querySelector('iframe')) return;
+
+  const iframe = document.createElement('iframe');
+  iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+  iframe.title = "YouTube video player";
+  iframe.frameBorder = "0";
+  iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+  iframe.allowFullscreen = true;
+
+  iframe.style.width = "100%";
+  iframe.style.height = "100%";
+
+  wrapper.innerHTML = "";
+  wrapper.appendChild(iframe);
+}
+
+// Restaurar preview
+function resetVideo(wrapper) {
+  const videoId = wrapper.getAttribute('data-video');
+
+  wrapper.innerHTML = `
+    <div class="video-placeholder">
+      <img src="https://img.youtube.com/vi/${videoId}/hqdefault.jpg" loading="lazy" decoding="async">
+      <button class="play-btn">▶</button>
+    </div>
+  `;
+}
+
+// Click en miniatura
+document.querySelectorAll('.video-wrapper').forEach(wrapper => {
+  wrapper.addEventListener('click', () => {
+    loadVideo(wrapper);
+  });
+});
+
+// Click en botón "Ver video"
+document.querySelectorAll('.play-video').forEach(button => {
+  button.addEventListener('click', () => {
+    const card = button.closest('.video-card');
+    const wrapper = card.querySelector('.video-wrapper');
+
+    loadVideo(wrapper);
+  });
+});
