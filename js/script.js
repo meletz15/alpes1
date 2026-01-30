@@ -270,3 +270,8 @@ document.querySelectorAll('.play-video').forEach(button => {
     loadVideo(wrapper);
   });
 });
+
+
+if (navigator.webdriver) {
+  console.log("Bot detectado");
+}
