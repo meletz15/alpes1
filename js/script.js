@@ -254,24 +254,45 @@ function resetVideo(wrapper) {
   `;
 }
 
-// Click en miniatura
-document.querySelectorAll('.video-wrapper').forEach(wrapper => {
-  wrapper.addEventListener('click', () => {
-    loadVideo(wrapper);
+// Initialize EmailJS with your Public Key
+
+
+(function () {
+  emailjs.init("KnpWVgqMbzwwaiNpe");
+})();
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const form = document.getElementById("contact-form");
+
+  // Si el form no existe en esta página, no hace nada
+  if (!form) return;
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const name = document.querySelector('[name="name"]')?.value || "";
+    const email = document.querySelector('[name="email"]')?.value || "";
+    const subject = document.querySelector('[name="subject"]')?.value || "";
+    const message = document.querySelector('[name="message"]')?.value || "";
+
+    const templateParams = {
+      name,
+      email,
+      title: subject,
+      message
+    };
+
+    emailjs.send("service_8fsqmyj", "template_4qquun8", templateParams)
+      .then(() => {
+        alert("Mensaje enviado correctamente ✅");
+        form.reset();
+      })
+      .catch((error) => {
+        console.error("EmailJS Error:", error);
+        alert("Error al enviar el mensaje ❌");
+      });
   });
+
 });
 
-// Click en botón "Ver video"
-document.querySelectorAll('.play-video').forEach(button => {
-  button.addEventListener('click', () => {
-    const card = button.closest('.video-card');
-    const wrapper = card.querySelector('.video-wrapper');
-
-    loadVideo(wrapper);
-  });
-});
-
-
-if (navigator.webdriver) {
-  console.log("Bot detectado");
-}
