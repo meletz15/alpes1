@@ -232,7 +232,11 @@ body {
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-
+.contacto h1{
+  color: white !important;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.6);
+  z-index: 2;
+}
 
 iframe,
 .frame-map {
@@ -260,11 +264,6 @@ iframe,
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
   z-index: 1;
-}
-
-/* Texto por encima del overlay */
-.contacto h2 {
-  z-index: 2;
 }
 
 /* TITULO DE LOS SERVICwebp */
