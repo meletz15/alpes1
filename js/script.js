@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  // 🚫 NO ejecutar slider en móvil
   if (window.innerWidth < 768) {
     console.log('Slider desactivado en móvil');
     return;
@@ -27,32 +26,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-
-
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener('click', function (e) {
     const targetId = this.getAttribute('href').slice(1);
     const target = document.getElementById(targetId);
     if (!target) return;
 
-    e.preventDefault(); // evitar comportamiento por defecto
+    e.preventDefault(); 
 
-    // Cerrar offcanvas primero si está abierto
     const offcanvasEl = document.querySelector('.offcanvas.show');
     if (offcanvasEl) {
       const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
       bsOffcanvas.hide();
-      // Esperar a que termine la animación antes de scrollear
       offcanvasEl.addEventListener('hidden.bs.offcanvas', () => {
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }, { once: true });
     } else {
-      // Si el offcanvas no está abierto, simplemente hacer scroll
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   });
 });
-
 
 document.getElementById('servicio1m-link').addEventListener('click', handleServiceClick);
 document.getElementById('servicio2m-link').addEventListener('click', handleServiceClick);
@@ -87,7 +80,6 @@ let scale = 1;
 let initialDistance = 0;
 let lastTap = 0;
 
-// abrir modal
 imagenes.forEach((img, i) => {
   img.addEventListener("click", () => {
     index = i;
@@ -96,7 +88,6 @@ imagenes.forEach((img, i) => {
   });
 });
 
-// bloquear scroll
 modalEl.addEventListener("shown.bs.modal", () => {
   document.body.classList.add("no-scroll");
 });
@@ -106,21 +97,18 @@ modalEl.addEventListener("hidden.bs.modal", () => {
   resetTransform();
 });
 
-// mostrar imagen
 function mostrarImagen() {
   imagenModal.src = imagenes[index].src;
   contador.textContent = `${index + 1} / ${imagenes.length}`;
   resetTransform();
 }
 
-// reset
 function resetTransform() {
   scale = 1;
   moveX = moveY = 0;
   imagenModal.style.transform = `translate(-50%, -50%) scale(${scale})`;
 }
 
-// flechas
 document.querySelector(".prev").onclick = () => cambiar(-1);
 document.querySelector(".next").onclick = () => cambiar(1);
 
@@ -129,10 +117,8 @@ function cambiar(dir) {
   mostrarImagen();
 }
 
-// cerrar
 document.getElementById("cerrarModal").onclick = () => modal.hide();
 
-// TOUCH START
 imagenModal.addEventListener("touchstart", e => {
   if (e.touches.length === 2) {
     initialDistance = getDistance(e.touches);
@@ -142,7 +128,6 @@ imagenModal.addEventListener("touchstart", e => {
   }
 });
 
-// TOUCH MOVE
 imagenModal.addEventListener("touchmove", e => {
   if (e.touches.length === 2) {
     const newDistance = getDistance(e.touches);
@@ -156,10 +141,8 @@ imagenModal.addEventListener("touchmove", e => {
     `translate(calc(-50% + ${moveX}px), calc(-50% + ${moveY}px)) scale(${scale})`;
 });
 
-// TOUCH END (AQUÍ VA EL DOBLE TAP)
 imagenModal.addEventListener("touchend", () => {
 
-  // 🔍 DOBLE TAP PARA ZOOM
   const now = new Date().getTime();
   if (now - lastTap < 300) {
     scale = scale === 1 ? 2 : 1;
@@ -170,13 +153,11 @@ imagenModal.addEventListener("touchend", () => {
   }
   lastTap = now;
 
-  // 🔽 DESLIZAR ABAJO PARA CERRAR
   if (moveY > 120) {
     modal.hide();
     return;
   }
 
-  // ↔ SWIPE LATERAL (solo sin zoom)
   if (Math.abs(moveX) > 80 && scale === 1) {
     moveX > 0 ? cambiar(-1) : cambiar(1);
   }
@@ -184,14 +165,12 @@ imagenModal.addEventListener("touchend", () => {
   resetTransform();
 });
 
-// distancia para pinch
 function getDistance(touches) {
   const dx = touches[0].clientX - touches[1].clientX;
   const dy = touches[0].clientY - touches[1].clientY;
   return Math.sqrt(dx * dx + dy * dy);
 }
 
-// flechas auto-hide
 const navs = document.querySelectorAll(".nav");
 
 function mostrarFlechas() {
@@ -204,7 +183,6 @@ function mostrarFlechas() {
 
 imagenModal.addEventListener("touchstart", mostrarFlechas);
 
-// preload imágenes
 function preload() {
   imagenes.forEach(img => {
     const i = new Image();
@@ -212,24 +190,20 @@ function preload() {
   });
 }
 preload();
-
 function loadVideo(wrapper) {
   if (!wrapper) return;
 
   const videoId = wrapper.getAttribute('data-video');
 
-  // Cerrar todos los otros videos primero
+  // Cerrar otros videos
   document.querySelectorAll('.video-wrapper').forEach(other => {
-    if (other !== wrapper) {
-      resetVideo(other);
-    }
+    if (other !== wrapper) resetVideo(other);
   });
 
-  // Evitar recargar si ya existe iframe
   if (wrapper.querySelector('iframe')) return;
 
   const iframe = document.createElement('iframe');
-  iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+  iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
   iframe.title = "YouTube video player";
   iframe.frameBorder = "0";
   iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
@@ -242,7 +216,6 @@ function loadVideo(wrapper) {
   wrapper.appendChild(iframe);
 }
 
-// Restaurar preview
 function resetVideo(wrapper) {
   const videoId = wrapper.getAttribute('data-video');
 
@@ -254,9 +227,18 @@ function resetVideo(wrapper) {
   `;
 }
 
-// Initialize EmailJS with your Public Key
+document.querySelectorAll('.video-wrapper').forEach(wrapper => {
+  wrapper.addEventListener('click', () => loadVideo(wrapper));
+});
 
+document.querySelectorAll('.play-video').forEach(button => {
+  button.addEventListener('click', function () {
+    const wrapper = this.closest('.video-card').querySelector('.video-wrapper');
+    loadVideo(wrapper);
+  });
+});
 
+// EMAILJS
 (function () {
   emailjs.init("KnpWVgqMbzwwaiNpe");
 })();
@@ -265,7 +247,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const form = document.getElementById("contact-form");
 
-  // Si el form no existe en esta página, no hace nada
   if (!form) return;
 
   form.addEventListener("submit", function (event) {
@@ -295,4 +276,3 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
-

@@ -4,7 +4,6 @@ body {
   background-color: #ffffff;
 }
 
-
 /* HEADER */
 .seccion-fondo {
   background-image: url(../img/general/header_fondo.jpeg);
@@ -102,7 +101,6 @@ body {
   background: rgba(0, 0, 0, 0.7);
 }
 
-/* contenido encima */
 .items-icon .content {
   position: relative;
   z-index: 1;
@@ -399,7 +397,6 @@ footer {
   line-height: 1.2;
 }
 
-/* botón agradable */
 .video-info .btn {
   border-radius: 999px;
   font-size: 0.75rem;
@@ -494,20 +491,20 @@ footer {
   }
 
   .servicios-mobil-container .link-container {
-    height: 300px; /* altura aumentada */
+    height: 300px; 
     margin-top: 2rem !important;
     border-radius: 0.5rem;
     text-align: center;
     font-size: 0.9rem;
     display: flex;
-    align-items: center; /* centrado vertical */
-    justify-content: center; /* centrado horizontal */
+    align-items: center; 
+    justify-content: center; 
   }
 
   .galeria img {
-    height: 260px; /* ajusta la altura que quieras */
-    object-fit: cover; /* rellena sin deformar */
-    width: 100%; /* mantiene ancho responsive */
+    height: 260px; 
+    object-fit: cover; 
+    width: 100%; 
   }
 }
 
@@ -537,8 +534,6 @@ footer {
   .serviceM {
     width: 35rem;
   }
-
-  
 
   .section-2 {
     width: 45rem;
@@ -570,7 +565,6 @@ footer {
     font-size: 1.3rem;
   }
 
-  /* Ajuste de márgenes solo en desktop */
   .servicios-mobil-container .link-container {
     height: 260px;
     margin-top: 2rem !important;
@@ -580,7 +574,7 @@ footer {
   }
 
   .servicios-mobil-container .link-container h4 {
-    font-size: 1.3rem; /* ajusta aquí el tamaño que quieras */
+    font-size: 1.3rem; 
   }
 
   .galeria {
@@ -589,7 +583,6 @@ footer {
     gap: 1.5rem;
   }
 
-  /* Neutralizamos columnas de Bootstrap solo en desktop */
   .galeria > div {
     width: 100%;
     max-width: 100%;
@@ -597,11 +590,9 @@ footer {
   }
 
   .galeria img {
-    height: 260px; /* ajusta aquí si quieres más o menos */
-    object-fit: cover; /* rellena sin deformar */
+    height: 260px; 
+    object-fit: cover;
   }
-
-  
 
   .informacion-contacto {
     text-align: center;
