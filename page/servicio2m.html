@@ -11,11 +11,14 @@
         content="closets, diseño de closets, remodelación de closets, armarios, muebles a medida, Guatemala">
     <meta name="author" content="ALPES">
     <link rel="icon" href="../img/general/logo.webp" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <meta property="og:title" content="Closets | Diseño y Remodelación de Closets Modernos">
     <meta property="og:description"
         content="Diseño e instalación de closets modernos y funcionales para hogares y negocios en Guatemala. Soluciones a medida, calidad y estilo.">
@@ -28,38 +31,25 @@
 
 
 <body>
-    <header class="seccion-fondo fixed-top" role="banner">
-        <div class="container-fluid">
-            <div class="row align-items-center g-0">
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    <header class="header-alpes fixed-top" role="banner">
+        <div class="header-inner">
+            <button type="button" class="header-btn-menu" data-bs-toggle="offcanvas" data-bs-target="#menuMovil"
+                aria-label="Abrir menú de navegación">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
 
-                <!-- MENÚ HAMBURGUESA -->
-                <div class="col-3 d-flex align-items-center ps-3">
-                    <button type="button" class="btn p-0" data-bs-toggle="offcanvas" data-bs-target="#menuMovil"
-                        aria-label="Abrir menú de navegación">
-                        <i class="fa-solid fa-bars fs-2 text-dark" aria-hidden="true"></i>
-                    </button>
-                </div>
+            <a href="../index.html" class="header-logo" aria-label="Ir a la página principal - ALPES">
+                <img src="../img/general/logo.webp" alt="ALPES - Mueblería y Cielo Raso en Guatemala" width="160"
+                    height="auto" loading="eager">
+            </a>
 
-                <!-- LOGO CENTRADO -->
-                <div class="col-6 d-flex justify-content-center">
-                    <a href="../index.html">
-                        <figure class="fig-img m-0">
-                            <img class="img-logo" src="../img/general/logo.webp" alt="Logo de Tu Empresa" width="120"
-                                height="auto" loading="lazy">
-                        </figure>
-                    </a>
-                </div>
-
-                <!-- TELÉFONO -->
-                <div class="col-3 d-flex justify-content-end pe-3">
-                    <a href="tel:+50241339093" class="text-dark text-decoration-none d-flex align-items-center gap-2"
-                        aria-label="Llamar al +502 4133 9093">
-                        <i class="fa-solid fa-phone fs-2" aria-hidden="true"></i>
-                        <span class="visually-hidden">Llamar al +502 4133 9093</span>
-                    </a>
-                </div>
-
-            </div>
+            <a href="tel:+50241339093" class="header-phone" aria-label="Llamar a ALPES al +502 4133 9093">
+                <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+                <span class="header-phone-text">4133 9093</span>
+            </a>
         </div>
     </header>
 
@@ -288,21 +278,6 @@
                 </p>
             </div>
 
-            <!-- Botón de WhatsApp -->
-            <a href="https://wa.me/+50241339093?text=Hola%20quiero%20más%20información" target="_blank"
-                class="text-decoration-none" aria-label="Contactar por WhatsApp">
-                <div class="call-box my-4 mx-auto" style="max-width: 350px; cursor: pointer;">
-                    <div class="call-icon">
-                        <i class="bi bi-whatsapp"></i>
-                    </div>
-                    <div class="text-dark fw-bold">
-                        Cotizar<br>
-                        <small>CLOSET</small>
-                    </div>
-                </div>
-            </a>
-
-
         </section>
 
         <!-- Formulario de contacto -->
@@ -381,6 +356,12 @@
                     aria-label="Mapa de Santa María, El Tablón, Sololá">
                 </iframe>
             </div>
+            <div class="text-center mt-3">
+                <a href="https://maps.google.com/?q=Plaza+Los+Saucos+Sololá+Guatemala" target="_blank" rel="noopener"
+                    class="btn-map">
+                    📍 Abrir en Google Maps
+                </a>
+            </div>
         </div>
 
 
@@ -409,103 +390,83 @@
     </footer>
 
 
-    <!-- DESPLEGABLE -->
-    <!-- DESPLEGABLE OFFCANVAS -->
-    <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="menuMovil"
-        aria-labelledby="offcanvasMenuLabel">
+    <!-- WhatsApp flotante -->
+    <a href="https://wa.me/50241339093?text=Hola%20ALPES,%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n."
+        class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+        <i class="bi bi-whatsapp" aria-hidden="true"></i>
+    </a>
 
-        <!-- Cabecera -->
-        <div class="offcanvas-header">
-            <h2 class="offcanvas-title" id="offcanvasMenuLabel">Menú de navegación</h2>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+    <!-- Menú lateral ALPES -->
+    <div class="offcanvas offcanvas-start menu-alpes" tabindex="-1" id="menuMovil"
+        aria-label="Menú de navegación ALPES">
+        <h2 id="offcanvasMenuLabel" class="visually-hidden">Menú de navegación</h2>
+        <div class="menu-alpes-header">
+            <div class="menu-alpes-brand">
+                <img src="../img/general/logo.webp" alt="" width="48" height="48" class="menu-alpes-logo-img">
+                <div>
+                    <span class="menu-alpes-name">ALPES</span>
+                    <span class="menu-alpes-tagline">Mueblería y Cielo Raso · Guatemala</span>
+                </div>
+            </div>
+            <button type="button" class="menu-alpes-close btn-close" data-bs-dismiss="offcanvas"
                 aria-label="Cerrar menú"></button>
         </div>
 
-        <div class="offcanvas-body">
+        <div class="offcanvas-body menu-alpes-body">
+            <nav class="menu-alpes-nav" aria-label="Navegación principal">
 
-            <ul class="navbar-nav">
+                <p class="menu-alpes-group-title">Empresa</p>
+                <ul class="menu-alpes-list">
+                    <li><a href="../index.html" class="menu-alpes-link"><i class="bi bi-house-door"></i> Inicio</a></li>
+                    <li><a href="../index.html#quienes-somos" class="menu-alpes-link"><i class="bi bi-people"></i>
+                            Quiénes somos</a></li>
+                </ul>
 
-                <!-- Inicio -->
-                <li class="nav-item mb-2">
-                    <a href="../index.html" class="nav-link text-white fs-5" aria-label="Ir a Inicio">
-                        Inicio
-                    </a>
-                </li>
+                <p class="menu-alpes-group-title">Mueblería</p>
+                <ul class="menu-alpes-list">
+                    <li><a href="servicio1m.html" class="menu-alpes-link" id="servicio1m-link"><i
+                                class="bi bi-house-gear"></i> Cocina integral</a></li>
+                    <li><a href="servicio2m.html" class="menu-alpes-link" id="servicio2m-link"><i
+                                class="bi bi-box-seam"></i> Closets</a></li>
+                    <li><a href="servicio3m.html" class="menu-alpes-link" id="servicio3m-link"><i
+                                class="bi bi-building"></i> Mobiliario para oficinas</a></li>
+                    <li><a href="servicio4m.html" class="menu-alpes-link" id="servicio4m-link"><i
+                                class="bi bi-shop"></i> Muebles comerciales</a></li>
+                    <li><a href="servicio5m.html" class="menu-alpes-link" id="servicio5m-link"><i class="bi bi-tv"></i>
+                            Centro de entretenimiento</a></li>
+                    <li><a href="servicio6m.html" class="menu-alpes-link" id="servicio6m-link"><i
+                                class="bi bi-reception-4"></i> Recepciones</a></li>
+                    <li><a href="servicio7m.html" class="menu-alpes-link" id="servicio7m-link"><i
+                                class="bi bi-diagram-3"></i> Mesa de reunión</a></li>
+                </ul>
 
-                <!-- Quiénes somos -->
-                <li class="nav-item mb-2">
-                    <a href="../index.html#quienes-somos" class="nav-link text-white fs-5"
-                        aria-label="Ir a Quiénes somos">
-                        Quiénes somos
-                    </a>
-                </li>
+                <p class="menu-alpes-group-title">Cielo raso y acabados</p>
+                <ul class="menu-alpes-list">
+                    <li><a href="servicio1c.html" class="menu-alpes-link" id="servicio1c-link"><i
+                                class="bi bi-grid-3x3"></i> Cielo raso</a></li>
+                    <li><a href="servicio2c.html" class="menu-alpes-link" id="servicio2c-link"><i
+                                class="bi bi-sliders"></i> Techo acústico y divisiones</a></li>
+                    <li><a href="servicio3c.html" class="menu-alpes-link" id="servicio3c-link"><i class="bi bi-mic"></i>
+                            Escenarios</a></li>
+                    <li><a href="servicio4c.html" class="menu-alpes-link" id="servicio4c-link"><i
+                                class="bi bi-brush"></i> Diseño y pintura</a></li>
+                    <li><a href="servicio5c.html" class="menu-alpes-link" id="servicio5c-link"><i
+                                class="bi bi-palette"></i> Decoración de interiores</a></li>
+                    <li><a href="servicio6c.html" class="menu-alpes-link" id="servicio6c-link"><i class="bi bi-tv"></i>
+                            Centro de entretenimiento</a></li>
+                </ul>
 
-                <!-- Servicios de Mueblería -->
-                <li class="nav-item dropdown mb-2">
-                    <a class="nav-link dropdown-toggle text-white fs-5" href="#" role="button" data-bs-toggle="dropdown"
-                        data-bs-auto-close="outside" aria-expanded="false" aria-haspopup="true">
-                        Servicios de Mueblería
-                    </a>
-                    <ul class="dropdown-menu bg-secondary">
-                        <li><a class="dropdown-item text-white" href="./servicio1m.html" id="servicio1m-link">Cocina
-                                Integral</a></li>
-                        <li><a class="dropdown-item text-white" href="./servicio2m.html"
-                                id="servicio2m-link">Closets</a></li>
-                        <li><a class="dropdown-item text-white" href="./servicio3m.html" id="servicio3m-link">Mobiliario
-                                para oficinas</a></li>
-                        <li><a class="dropdown-item text-white" href="./servicio4m.html" id="servicio4m-link">Muebles
-                                comerciales</a></li>
-                        <li><a class="dropdown-item text-white" href="./servicio5m.html" id="servicio5m-link">Centro de
-                                entretenimiento</a></li>
-                        <li><a class="dropdown-item text-white" href="./servicio6m.html"
-                                id="servicio6m-link">Recepciones</a></li>
-                        <li><a class="dropdown-item text-white" href="./servicio7m.html" id="servicio7m-link">Mesa de
-                                reunión</a></li>
-                    </ul>
-                </li>
+                <p class="menu-alpes-group-title">Contacto y medios</p>
+                <ul class="menu-alpes-list">
+                    <li><a href="contactenos.html" class="menu-alpes-link"><i class="bi bi-envelope"></i>
+                            Contáctenos</a></li>
+                    <li><a href="videosM.html" class="menu-alpes-link"><i class="bi bi-camera-video"></i> Videos
+                            Mueblería</a></li>
+                    <li><a href="videosC.html" class="menu-alpes-link"><i class="bi bi-camera-video"></i> Videos Cielo
+                            Raso</a></li>
+                </ul>
 
-                <!-- Servicios de Tabla Yeso -->
-                <li class="nav-item dropdown mb-2">
-                    <a class="nav-link dropdown-toggle text-white fs-5" href="#" role="button" data-bs-toggle="dropdown"
-                        data-bs-auto-close="outside" aria-expanded="false" aria-haspopup="true">
-                        Servicios de Tabla Yeso
-                    </a>
-                    <ul class="dropdown-menu bg-secondary">
-                        <li><a class="dropdown-item text-white" href="./servicio1c.html" id="servicio1c-link">Cielo
-                                raso</a></li>
-                        <li><a class="dropdown-item text-white" href="./servicio2c.html" id="servicio2c-link">Techo
-                                acústico y divisiones</a></li>
-                        <li><a class="dropdown-item text-white" href="./servicio3c.html"
-                                id="servicio3c-link">Escenarios</a></li>
-                        <li><a class="dropdown-item text-white" href="./servicio4c.html" id="servicio4c-link">Diseño,
-                                pintura residencial y comercial</a></li>
-                        <li><a class="dropdown-item text-white" href="./servicio5c.html"
-                                id="servicio5c-link">Decoraciones de interiores</a></li>
-                        <li><a class="dropdown-item text-white" href="./servicio6c.html" id="servicio6c-link">Centro de
-                                entretenimiento</a></li>
-                    </ul>
-                </li>
-
-                <!-- Contáctenos -->
-                <li class="nav-item mb-2">
-                    <a href="contactenos.html" class="nav-link text-white fs-5" aria-label="Ir a Contáctenos">
-                        Contáctenos
-                    </a>
-                </li>
-
-                <!-- Videos -->
-                <li class="nav-item mb-2">
-                    <a href="videosM.html" class="nav-link text-white fs-5" aria-label="Ir a Videos de Mueblería">
-                        Videos de Mueblería
-                    </a>
-                </li>
-                <li class="nav-item mb-2">
-                    <a href="videosC.html" class="nav-link text-white fs-5" aria-label="Ir a Videos de Cielo Raso">
-                        Videos de Cielo Raso
-                    </a>
-                </li>
-
-            </ul>
+            </nav>
         </div>
     </div>
 

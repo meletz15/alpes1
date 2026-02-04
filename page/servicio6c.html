@@ -18,43 +18,40 @@
     <meta property="og:locale" content="es_GT">
 
     <link rel="icon" href="../img/general/logo.webp" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <body>
-    <header class="seccion-fondo fixed-top" role="banner">
-        <div class="container-fluid">
-            <div class="row align-items-center g-0">
-                <div class="col-3 d-flex align-items-center ps-3">
-                    <button type="button" class="btn p-0" data-bs-toggle="offcanvas" data-bs-target="#menuMovil"
-                        aria-label="Abrir menú de navegación">
-                        <i class="fa-solid fa-bars fs-2 text-dark" aria-hidden="true"></i>
-                    </button>
-                </div>
-                <div class="col-6 d-flex justify-content-center">
-                    <a href="../index.html">
-                        <figure class="fig-img m-0">
-                            <img class="img-logo" src="../img/general/logo.webp" alt="Logo de Tu Empresa" width="120"
-                                height="auto" loading="lazy">
-                        </figure>
-                    </a>
-                </div>
-                <div class="col-3 d-flex justify-content-end pe-3">
-                    <a href="tel:+50254545213" class="text-dark text-decoration-none d-flex align-items-center gap-2"
-                        aria-label="Llamar al +502 54545213">
-                        <i class="fa-solid fa-phone fs-2" aria-hidden="true"></i>
-                        <span class="visually-hidden">Llamar al +502 54545213</span>
-                    </a>
-                </div>
-            </div>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    <header class="header-alpes fixed-top" role="banner">
+        <div class="header-inner">
+            <button type="button" class="header-btn-menu" data-bs-toggle="offcanvas" data-bs-target="#menuMovil"
+                aria-label="Abrir menú de navegación">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <a href="../index.html" class="header-logo" aria-label="Ir a la página principal - ALPES">
+                <img src="../img/general/logo.webp" alt="ALPES - Mueblería y Cielo Raso en Guatemala" width="160"
+                    height="auto" loading="eager">
+            </a>
+
+            <a href="tel:+50254545213" class="header-phone" aria-label="Llamar a ALPES al +502 54545213">
+                <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+                <span class="header-phone-text">54545213</span>
+            </a>
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <div class="service-main position-relative text-center text-white d-flex align-items-center justify-content-center"
             itemscope itemtype="https://schema.org/Service">
             <h1 class="fw-bold font-sc" itemprop="name">
@@ -153,81 +150,66 @@
                 </p>
             </div>
 
-            <a href="https://wa.me/+50254545213?text=Hola%20quiero%20más%20información" target="_blank"
-                class="text-decoration-none" aria-label="Contactar por WhatsApp">
-                <div class="call-box my-4 mx-auto" style="max-width: 350px; cursor: pointer;">
-                    <div class="call-icon">
-                        <i class="bi bi-whatsapp"></i>
-                    </div>
-                    <div class="text-dark fw-bold">
-                        Cotizar<br>
-                        <small>CENTRO DE ENTRETENIMIENTO</small>
-                    </div>
-                </div>
-            </a>
-
-           
         </section>
 
-         <!-- Formulario de contacto -->
-            <section class="container my-5">
-                <div class="row justify-content-center">
-                    <div class="col-lg-7 col-md-9">
+        <!-- Formulario de contacto -->
+        <section class="container my-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-7 col-md-9">
 
-                        <div class="card contact-card border-0 rounded-4">
-                            <div class="card-body p-4 p-md-5">
+                    <div class="card contact-card border-0 rounded-4">
+                        <div class="card-body p-4 p-md-5">
 
-                               
-                                <h2 class="fw-bold mb-3 text-center">Contáctenos</h2>
-                                <p class="text-muted text-center mb-4">
-                                    Envíenos un mensaje y nos pondremos en contacto con usted en breve.
-                                </p>
 
-                                
-                                <form id="contact-form" novalidate>
+                            <h2 class="fw-bold mb-3 text-center">Contáctenos</h2>
+                            <p class="text-muted text-center mb-4">
+                                Envíenos un mensaje y nos pondremos en contacto con usted en breve.
+                            </p>
 
-                                    
-                                    <div class="mb-3">
-                                        <label for="name" class="form-label fw-semibold">Nombre completo</label>
-                                        <input type="text" id="name" name="name" class="form-control form-control-lg"
-                                            placeholder="Ingresa tu nombre completo" required autocomplete="name">
-                                    </div>
 
-                                    
-                                    <div class="mb-3">
-                                        <label for="email" class="form-label fw-semibold">Correo</label>
-                                        <input type="email" id="email" name="email" class="form-control form-control-lg"
-                                            placeholder="Ingresa tu correo" required autocomplete="email">
-                                    </div>
+                            <form id="contact-form" novalidate>
 
-                                    
-                                    <div class="mb-3">
-                                        <label for="subject" class="form-label fw-semibold">No. Teléfono</label>
-                                        <input type="text" id="subject" name="subject"
-                                            class="form-control form-control-lg" placeholder="Ingresa tu teléfono"
-                                            required>
-                                    </div>
 
-                                    
-                                    <div class="mb-4">
-                                        <label for="message" class="form-label fw-semibold">Mensaje</label>
-                                        <textarea id="message" name="message" class="form-control form-control-lg"
-                                            rows="5" placeholder="Escribe tu mensaje aqui..." required></textarea>
-                                    </div>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label fw-semibold">Nombre completo</label>
+                                    <input type="text" id="name" name="name" class="form-control form-control-lg"
+                                        placeholder="Ingresa tu nombre completo" required autocomplete="name">
+                                </div>
 
-                                    
-                                    <button type="submit" class="btn btn-primary btn-lg w-100 fw-semibold">
-                                        <i class="bi bi-send me-2"></i> Enviar Mensaje
-                                    </button>
 
-                                </form>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label fw-semibold">Correo</label>
+                                    <input type="email" id="email" name="email" class="form-control form-control-lg"
+                                        placeholder="Ingresa tu correo" required autocomplete="email">
+                                </div>
 
-                            </div>
+
+                                <div class="mb-3">
+                                    <label for="subject" class="form-label fw-semibold">No. Teléfono</label>
+                                    <input type="text" id="subject" name="subject" class="form-control form-control-lg"
+                                        placeholder="Ingresa tu teléfono" required>
+                                </div>
+
+
+                                <div class="mb-4">
+                                    <label for="message" class="form-label fw-semibold">Mensaje</label>
+                                    <textarea id="message" name="message" class="form-control form-control-lg" rows="5"
+                                        placeholder="Escribe tu mensaje aqui..." required></textarea>
+                                </div>
+
+
+                                <button type="submit" class="btn btn-primary btn-lg w-100 fw-semibold">
+                                    <i class="bi bi-send me-2"></i> Enviar Mensaje
+                                </button>
+
+                            </form>
+
                         </div>
-
                     </div>
+
                 </div>
-            </section>
+            </div>
+        </section>
 
         <div class="my-4" itemscope itemtype="https://schema.org/Place">
             <h2 class="mx-3 mb-3 d-flex align-items-center gap-2">
@@ -241,6 +223,12 @@
                     referrerpolicy="no-referrer-when-downgrade" title="Mapa de Santa María, El Tablón, Sololá"
                     aria-label="Mapa de Santa María, El Tablón, Sololá">
                 </iframe>
+            </div>
+            <div class="text-center mt-3">
+                <a href="https://maps.google.com/?q=Plaza+Los+Saucos+Sololá+Guatemala" target="_blank" rel="noopener"
+                    class="btn-map">
+                    📍 Abrir en Google Maps
+                </a>
             </div>
         </div>
 
@@ -262,85 +250,83 @@
         </div>
     </footer>
 
-    <!-- DESPLEGABLE OFFCANVAS -->
-    <div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1" id="menuMovil"
-        aria-labelledby="offcanvasMenuLabel">
-        <div class="offcanvas-header">
-            <h2 class="offcanvas-title" id="offcanvasMenuLabel">Menú de navegación</h2>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+    <!-- WhatsApp flotante -->
+    <a href="https://wa.me/50254545213?text=Hola%20ALPES,%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n."
+        class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+        <i class="bi bi-whatsapp" aria-hidden="true"></i>
+    </a>
+
+    <!-- Menú lateral ALPES -->
+    <div class="offcanvas offcanvas-start menu-alpes" tabindex="-1" id="menuMovil"
+        aria-label="Menú de navegación ALPES">
+        <h2 id="offcanvasMenuLabel" class="visually-hidden">Menú de navegación</h2>
+        <div class="menu-alpes-header">
+            <div class="menu-alpes-brand">
+                <img src="../img/general/logo.webp" alt="" width="48" height="48" class="menu-alpes-logo-img">
+                <div>
+                    <span class="menu-alpes-name">ALPES</span>
+                    <span class="menu-alpes-tagline">Mueblería y Cielo Raso · Guatemala</span>
+                </div>
+            </div>
+            <button type="button" class="menu-alpes-close btn-close" data-bs-dismiss="offcanvas"
                 aria-label="Cerrar menú"></button>
         </div>
-        <div class="offcanvas-body">
-            <ul class="navbar-nav">
-                <li class="nav-item mb-2">
-                    <a href="../index.html" class="nav-link text-white fs-5" aria-label="Ir a Inicio">
-                        Inicio
-                    </a>
-                </li>
-                <li class="nav-item mb-2">
-                    <a href="../index.html#quienes-somos" class="nav-link text-white fs-5"
-                        aria-label="Ir a Quiénes somos">
-                        Quiénes somos
-                    </a>
-                </li>
-                <li class="nav-item dropdown mb-2">
-                    <a class="nav-link dropdown-toggle text-white fs-5" href="#" role="button" data-bs-toggle="dropdown"
-                        data-bs-auto-close="outside" aria-expanded="false" aria-haspopup="true">
-                        Servicios de Mueblería
-                    </a>
-                    <ul class="dropdown-menu bg-secondary">
-                        <li><a class="dropdown-item text-white" href="./servicio1m.html" id="servicio1m-link">Cocina
-                                Integral</a></li>
-                        <li><a class="dropdown-item text-white" href="./servicio2m.html"
-                                id="servicio2m-link">Closets</a></li>
-                        <li><a class="dropdown-item text-white" href="./servicio3m.html" id="servicio3m-link">Mobiliario
-                                para oficinas</a></li>
-                        <li><a class="dropdown-item text-white" href="./servicio4m.html" id="servicio4m-link">Muebles
-                                comerciales</a></li>
-                        <li><a class="dropdown-item text-white" href="./servicio5m.html" id="servicio5m-link">Centro de
-                                entretenimiento</a></li>
-                        <li><a class="dropdown-item text-white" href="./servicio6m.html"
-                                id="servicio6m-link">Recepciones</a></li>
-                        <li><a class="dropdown-item text-white" href="./servicio7m.html" id="servicio7m-link">Mesa de
-                                reunión</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown mb-2">
-                    <a class="nav-link dropdown-toggle text-white fs-5" href="#" role="button" data-bs-toggle="dropdown"
-                        data-bs-auto-close="outside" aria-expanded="false" aria-haspopup="true">
-                        Servicios de Tabla Yeso
-                    </a>
-                    <ul class="dropdown-menu bg-secondary">
-                        <li><a class="dropdown-item text-white" href="./servicio1c.html" id="servicio1c-link">Cielo
-                                raso</a></li>
-                        <li><a class="dropdown-item text-white" href="./servicio2c.html" id="servicio2c-link">Techo
-                                acústico y divisiones</a></li>
-                        <li><a class="dropdown-item text-white" href="./servicio3c.html"
-                                id="servicio3c-link">Escenarios</a></li>
-                        <li><a class="dropdown-item text-white" href="./servicio4c.html" id="servicio4c-link">Diseño,
-                                pintura residencial y comercial</a></li>
-                        <li><a class="dropdown-item text-white" href="./servicio5c.html"
-                                id="servicio5c-link">Decoraciones de interiores</a></li>
-                        <li><a class="dropdown-item text-white" href="./servicio6c.html" id="servicio6c-link">Centro de
-                                entretenimiento</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item mb-2">
-                    <a href="contactenos.html" class="nav-link text-white fs-5" aria-label="Ir a Contáctenos">
-                        Contáctenos
-                    </a>
-                </li>
-                <li class="nav-item mb-2">
-                    <a href="videosM.html" class="nav-link text-white fs-5" aria-label="Ir a Videos de Mueblería">
-                        Videos de Mueblería
-                    </a>
-                </li>
-                <li class="nav-item mb-2">
-                    <a href="videosC.html" class="nav-link text-white fs-5" aria-label="Ir a Videos de Cielo Raso">
-                        Videos de Cielo Raso
-                    </a>
-                </li>
-            </ul>
+
+        <div class="offcanvas-body menu-alpes-body">
+            <nav class="menu-alpes-nav" aria-label="Navegación principal">
+
+                <p class="menu-alpes-group-title">Empresa</p>
+                <ul class="menu-alpes-list">
+                    <li><a href="../index.html" class="menu-alpes-link"><i class="bi bi-house-door"></i> Inicio</a></li>
+                    <li><a href="../index.html#quienes-somos" class="menu-alpes-link"><i class="bi bi-people"></i>
+                            Quiénes somos</a></li>
+                </ul>
+
+                <p class="menu-alpes-group-title">Mueblería</p>
+                <ul class="menu-alpes-list">
+                    <li><a href="servicio1m.html" class="menu-alpes-link" id="servicio1m-link"><i
+                                class="bi bi-house-gear"></i> Cocina integral</a></li>
+                    <li><a href="servicio2m.html" class="menu-alpes-link" id="servicio2m-link"><i
+                                class="bi bi-box-seam"></i> Closets</a></li>
+                    <li><a href="servicio3m.html" class="menu-alpes-link" id="servicio3m-link"><i
+                                class="bi bi-building"></i> Mobiliario para oficinas</a></li>
+                    <li><a href="servicio4m.html" class="menu-alpes-link" id="servicio4m-link"><i
+                                class="bi bi-shop"></i> Muebles comerciales</a></li>
+                    <li><a href="servicio5m.html" class="menu-alpes-link" id="servicio5m-link"><i class="bi bi-tv"></i>
+                            Centro de entretenimiento</a></li>
+                    <li><a href="servicio6m.html" class="menu-alpes-link" id="servicio6m-link"><i
+                                class="bi bi-reception-4"></i> Recepciones</a></li>
+                    <li><a href="servicio7m.html" class="menu-alpes-link" id="servicio7m-link"><i
+                                class="bi bi-diagram-3"></i> Mesa de reunión</a></li>
+                </ul>
+
+                <p class="menu-alpes-group-title">Cielo raso y acabados</p>
+                <ul class="menu-alpes-list">
+                    <li><a href="servicio1c.html" class="menu-alpes-link" id="servicio1c-link"><i
+                                class="bi bi-grid-3x3"></i> Cielo raso</a></li>
+                    <li><a href="servicio2c.html" class="menu-alpes-link" id="servicio2c-link"><i
+                                class="bi bi-sliders"></i> Techo acústico y divisiones</a></li>
+                    <li><a href="servicio3c.html" class="menu-alpes-link" id="servicio3c-link"><i class="bi bi-mic"></i>
+                            Escenarios</a></li>
+                    <li><a href="servicio4c.html" class="menu-alpes-link" id="servicio4c-link"><i
+                                class="bi bi-brush"></i> Diseño y pintura</a></li>
+                    <li><a href="servicio5c.html" class="menu-alpes-link" id="servicio5c-link"><i
+                                class="bi bi-palette"></i> Decoración de interiores</a></li>
+                    <li><a href="servicio6c.html" class="menu-alpes-link" id="servicio6c-link"><i class="bi bi-tv"></i>
+                            Centro de entretenimiento</a></li>
+                </ul>
+
+                <p class="menu-alpes-group-title">Contacto y medios</p>
+                <ul class="menu-alpes-list">
+                    <li><a href="contactenos.html" class="menu-alpes-link"><i class="bi bi-envelope"></i>
+                            Contáctenos</a></li>
+                    <li><a href="videosM.html" class="menu-alpes-link"><i class="bi bi-camera-video"></i> Videos
+                            Mueblería</a></li>
+                    <li><a href="videosC.html" class="menu-alpes-link"><i class="bi bi-camera-video"></i> Videos Cielo
+                            Raso</a></li>
+                </ul>
+
+            </nav>
         </div>
     </div>
 

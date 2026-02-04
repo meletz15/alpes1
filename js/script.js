@@ -1,5 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  // Logo del navbar: grande al inicio, pequeño al hacer scroll
+  const header = document.querySelector('.header-alpes');
+  if (header) {
+    const onScroll = () => {
+      if (window.scrollY > 60) {
+        header.classList.add('header-scrolled');
+      } else {
+        header.classList.remove('header-scrolled');
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
   if (window.innerWidth < 768) {
     console.log('Slider desactivado en móvil');
     return;
@@ -47,8 +61,9 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
   });
 });
 
-document.getElementById('servicio1m-link').addEventListener('click', handleServiceClick);
-document.getElementById('servicio2m-link').addEventListener('click', handleServiceClick);
+document.querySelectorAll('[id^="servicio"][id$="-link"]').forEach(function (el) {
+  el.addEventListener('click', handleServiceClick);
+});
 
 function handleServiceClick(e) {
   e.preventDefault();
